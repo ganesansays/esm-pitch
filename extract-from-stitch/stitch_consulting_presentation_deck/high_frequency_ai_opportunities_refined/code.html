@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phoenix Digital Assistant - High-Frequency AI Opportunities</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Public+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed-dim": "#b9c7df",
+                "on-tertiary-fixed": "#002022",
+                "on-tertiary-container": "#009098",
+                "inverse-primary": "#515f78",
+                "secondary-container": "#3c4a5e",
+                "on-background": "#e0e3e5",
+                "primary-container": "#0a192f",
+                "primary-fixed-dim": "#b9c7e4",
+                "surface-dim": "#101415",
+                "surface-container-highest": "#323537",
+                "on-error-container": "#ffdad6",
+                "error-container": "#93000a",
+                "on-surface": "#e0e3e5",
+                "surface-tint": "#b9c7e4",
+                "on-error": "#690005",
+                "tertiary": "#00dbe7",
+                "on-tertiary": "#00363a",
+                "on-primary": "#233148",
+                "outline-variant": "#44474d",
+                "on-surface-variant": "#c5c6cd",
+                "on-secondary-fixed-variant": "#3a485b",
+                "on-primary-container": "#74829d",
+                "tertiary-container": "#001d1f",
+                "on-tertiary-fixed-variant": "#004f54",
+                "surface-bright": "#363a3b",
+                "on-primary-fixed-variant": "#39475f",
+                "secondary": "#b9c7df",
+                "on-primary-fixed": "#0d1c32",
+                "surface-container-high": "#272a2c",
+                "surface": "#101415",
+                "on-secondary": "#233144",
+                "on-secondary-container": "#abb9d1",
+                "secondary-fixed": "#d5e3fc",
+                "on-secondary-fixed": "#0d1c2e",
+                "inverse-surface": "#e0e3e5",
+                "primary": "#b9c7e4",
+                "primary-fixed": "#d6e3ff",
+                "surface-container": "#1d2022",
+                "tertiary-fixed": "#74f5ff",
+                "surface-container-lowest": "#0b0f10",
+                "surface-container-low": "#191c1e",
+                "background": "#101415",
+                "tertiary-fixed-dim": "#00dbe7",
+                "surface-variant": "#323537",
+                "error": "#ffb4ab",
+                "inverse-on-surface": "#2d3133",
+                "outline": "#8f9097"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "stack-xs": "4px",
+                "margin-tablet": "32px",
+                "stack-sm": "8px",
+                "stack-lg": "32px",
+                "margin-desktop": "64px",
+                "container-max": "1440px",
+                "stack-xl": "64px",
+                "stack-md": "16px",
+                "gutter": "24px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-xl-desktop": ["Public Sans"],
+                "data-display": ["Inter"],
+                "body-lg": ["Inter"],
+                "body-sm": ["Inter"],
+                "label-caps": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-md": ["Public Sans"],
+                "headline-lg": ["Public Sans"],
+                "headline-xl": ["Public Sans"]
+            },
+            "fontSize": {
+                "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "data-display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "300"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .executive-border {
+            border-left: 4px solid #00dbe7;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid #475569;
+            transition: all 0.2s ease-in-out;
+        }
+        .glass-card:hover {
+            border-color: #00dbe7;
+            box-shadow: 0 0 15px rgba(0, 219, 231, 0.15);
+        }
+        .gradient-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 10% 20%, rgba(10, 25, 47, 0.8) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(0, 219, 231, 0.05) 0%, transparent 40%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md">
+<div class="gradient-mesh"></div>
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant">
+<div class="flex items-center justify-between px-margin-desktop py-stack-md w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-sm cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-primary font-headline-md text-headline-md" style="font-variation-settings: 'FILL' 1;">insights</span>
+<h1 class="font-headline-md text-headline-md font-semibold text-primary">Phoenix Digital Assistant</h1>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-stack-xl">
+<!-- Header Section -->
+<section class="mb-stack-xl">
+<div class="executive-border pl-stack-md">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-stack-xs uppercase tracking-tight">High-Frequency AI Opportunities</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                    Addressing the most common friction points where users bypass Phoenix for back-office support.
+                </p>
+</div>
+</section>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Opportunity Grid (Bento Style) -->
+<div class="col-span-12 lg:col-span-8 grid gap-gutter grid-cols-1">
+<!-- Crew Enquiries -->
+<div class="glass-card p-stack-lg rounded-lg flex flex-col gap-stack-md py-stack-xl"><div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary">groups</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant opacity-60">STRATEGIC BUCKET 01</span>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-xs tracking-tight">Crew Enquiries</h3>
+<ul class="flex flex-col gap-stack-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-stack-sm">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full flex-shrink-0"></span>
+<span class="leading-relaxed">Certification status</span>
+</li>
+<li class="flex items-center gap-stack-sm">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full flex-shrink-0"></span>
+<span class="leading-relaxed">Crew changes</span>
+</li>
+<li class="flex items-center gap-stack-sm">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full flex-shrink-0"></span>
+<span class="leading-relaxed">Travel arrangements</span>
+</li>
+</ul>
+</div></div>
+<!-- Technical & Maintenance -->
+<div class="glass-card p-stack-lg rounded-lg flex flex-col gap-stack-md py-stack-xl">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary">engineering</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant opacity-60">STRATEGIC BUCKET 02</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-xs">Technical &amp; Maintenance</h3>
+<ul class="flex flex-col gap-stack-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Job due dates</li>
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Work order approvals</li>
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Spare parts status</li>
+</ul>
+</div>
+</div>
+<!-- Safety & Compliance -->
+<div class="glass-card p-stack-lg rounded-lg flex flex-col gap-stack-md py-stack-xl">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary">verified_user</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant opacity-60">STRATEGIC BUCKET 03</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-xs">Safety &amp; Compliance</h3>
+<ul class="flex flex-col gap-stack-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Open audit findings</li>
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Expiring certificates</li>
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Latest procedures</li>
+</ul>
+</div>
+</div>
+<!-- Procurement & Logistics -->
+<div class="glass-card p-stack-lg rounded-lg flex flex-col gap-stack-md py-stack-xl">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary">local_shipping</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant opacity-60">STRATEGIC BUCKET 04</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-xs">Procurement &amp; Logistics</h3>
+<ul class="flex flex-col gap-stack-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Requisition approvals</li>
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Delivery tracking</li>
+<li class="flex items-center gap-stack-sm"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>Inventory optimization</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Side Panels -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<!-- The Why Behind the Call -->
+<div class="bg-secondary-container bg-opacity-20 p-stack-lg rounded-lg border-l-4 border-tertiary">
+<h4 class="font-label-caps text-label-caps text-tertiary mb-stack-md uppercase">The 'Why' Behind the Call</h4>
+<div class="space-y-stack-md">
+<div class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim text-body-lg">distance</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Complex Navigation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">Current ERP structures are non-intuitive for rapid field queries.</p>
+</div>
+</div>
+<div class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim text-body-lg">data_exploration</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Fragmented Data</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">Information resides in disconnected silos (SMS, Procurement, HR).</p>
+</div>
+</div>
+<div class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim text-body-lg">psychology</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Need for Interpretation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">Raw data requires contextual translation before action is taken.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured AI Queries -->
+<div class="glass-card p-stack-lg rounded-lg overflow-hidden relative">
+<div class="absolute -right-8 -top-8 opacity-10">
+<span class="material-symbols-outlined text-9xl text-tertiary">chat_bubble</span>
+</div>
+<h4 class="font-label-caps text-label-caps text-primary-fixed-dim mb-stack-md uppercase">Featured AI Queries</h4>
+<div class="space-y-stack-sm relative z-10">
+<div class="p-stack-sm bg-surface-container-highest border border-outline-variant rounded italic text-body-sm text-tertiary flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-base">forum</span>
+                            "When is my next crew change?"
+                        </div>
+<div class="p-stack-sm bg-surface-container-highest border border-outline-variant rounded italic text-body-sm text-tertiary flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-base">forum</span>
+                            "Show me open observations for my vessel."
+                        </div>
+<div class="p-stack-sm bg-surface-container-highest border border-outline-variant rounded italic text-body-sm text-tertiary flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-base">forum</span>
+                            "Status of PR #4590 for spare pistons?"
+                        </div>
+<div class="p-stack-sm bg-surface-container-highest border border-outline-variant rounded italic text-body-sm text-tertiary flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-base">forum</span>
+                            "Summarize the latest heavy lift procedure."
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Visualization Placeholder / Decorative Element -->
+<div class="mt-stack-xl grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="col-span-2 relative h-48 rounded-lg overflow-hidden border border-outline-variant">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest bg-surface px-stack-md py-stack-xs rounded border border-outline-variant">PROPRIETARY EFFICIENCY MODELING</p>
+</div>
+</div>
+<div class="glass-card p-stack-md flex flex-col justify-center items-center text-center">
+<span class="font-data-display text-data-display text-tertiary">42%</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Est. Reduction in Helpdesk Volume</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 bg-surface border-t border-outline-variant">
+<div class="flex justify-between items-center px-margin-desktop py-stack-sm w-full max-w-container-max mx-auto pointer-events-none">
+<span class="font-label-caps text-label-caps tracking-widest text-on-surface-variant">© 2024 PHOENIX DIGITAL ASSISTANT INITIATIVE | HIGHLY CONFIDENTIAL</span>
+<div class="flex gap-stack-lg">
+<span class="font-label-caps text-label-caps text-on-surface-variant opacity-70">SLIDE 1 OF 12</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant opacity-70">INTERNAL USE ONLY</span>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle micro-interactions
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = 'translateY(-2px)';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body></html>

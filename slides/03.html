@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Strategic Vision | Phoenix Digital Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Public+Sans:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Public+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "outline-variant": "#44474d",
+                    "tertiary-fixed-dim": "#00dbe7",
+                    "surface-container-highest": "#323537",
+                    "surface-tint": "#b9c7e4",
+                    "inverse-primary": "#515f78",
+                    "on-primary": "#233148",
+                    "surface-container-low": "#191c1e",
+                    "tertiary-fixed": "#74f5ff",
+                    "background": "#101415",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-surface": "#e0e3e5",
+                    "surface-bright": "#363a3b",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "inverse-surface": "#e0e3e5",
+                    "primary-container": "#0a192f",
+                    "surface-container-high": "#272a2c",
+                    "tertiary": "#00dbe7",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#001d1f",
+                    "on-tertiary-fixed": "#002022",
+                    "surface-variant": "#323537",
+                    "surface": "#101415",
+                    "on-secondary-container": "#abb9d1",
+                    "on-background": "#e0e3e5",
+                    "on-primary-container": "#74829d",
+                    "on-error-container": "#ffdad6",
+                    "surface-dim": "#101415",
+                    "primary": "#b9c7e4",
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#0b0f10",
+                    "surface-container": "#1d2022",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "inverse-on-surface": "#2d3133",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "on-secondary": "#233144",
+                    "secondary-container": "#3c4a5e",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary-fixed": "#d5e3fc",
+                    "outline": "#8f9097",
+                    "on-surface-variant": "#c5c6cd",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "secondary": "#b9c7df",
+                    "on-tertiary-container": "#009098",
+                    "on-tertiary": "#00363a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "64px",
+                    "stack-xl": "64px",
+                    "margin-tablet": "32px",
+                    "stack-xs": "4px"
+            },
+            "fontFamily": {
+                    "headline-xl-mobile": ["Public Sans"],
+                    "headline-lg": ["Public Sans"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-xl": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-sm": ["Inter"],
+                    "data-display": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "data-display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "300"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ai-layer-glow {
+            box-shadow: 0 0 40px rgba(0, 219, 231, 0.15);
+        }
+        .diagonal-split {
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        }
+        .state-connector {
+            background: linear-gradient(90deg, transparent 0%, #475569 50%, #00dbe7 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-tertiary/30">
+<!-- Top Navigation Anchor -->
+<header class="w-full top-0 sticky border-b border-outline-variant bg-surface z-50">
+<div class="flex items-center justify-between px-margin-desktop py-stack-md w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-sm cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-primary font-headline-md">insights</span>
+<span class="font-headline-md text-headline-md font-semibold text-primary">Phoenix Digital Assistant</span>
+</div>
+</div>
+</header>
+<main class="min-h-[calc(100vh-120px)] w-full max-w-container-max mx-auto px-margin-desktop py-stack-xl flex flex-col gap-stack-xl">
+<!-- Header Section -->
+<section class="max-w-3xl">
+<div class="border-l-4 border-tertiary pl-stack-md mb-stack-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Strategic Vision</h1>
+</div>
+<p class="font-body-lg text-on-surface-variant">Transitioning from friction-heavy manual processes to a seamless, intelligence-driven executive experience. This paradigm shift refocuses human capital on strategy rather than retrieval.</p>
+</section>
+<!-- Comparison Bento Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+<!-- Current State Card -->
+<div class="lg:col-span-5 flex flex-col gap-stack-md p-stack-lg border border-outline-variant bg-surface-container-low rounded-lg relative overflow-hidden group">
+<div class="flex items-center gap-stack-sm text-outline">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-caps uppercase tracking-widest">Current State</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Friction &amp; Latency</h3>
+<ul class="flex flex-col gap-stack-md mt-stack-sm">
+<li class="flex items-start gap-stack-sm opacity-70">
+<span class="material-symbols-outlined text-outline mt-1">search</span>
+<div>
+<p class="font-semibold text-on-surface">Manual Portal Search</p>
+<p class="text-body-sm text-on-surface-variant">Navigating siloed legacy systems with inconsistent UX.</p>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm opacity-70">
+<span class="material-symbols-outlined text-outline mt-1">call</span>
+<div>
+<p class="font-semibold text-on-surface">Back-office Outreach</p>
+<p class="text-body-sm text-on-surface-variant">Emailing departments for status updates and basic data.</p>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm opacity-70">
+<span class="material-symbols-outlined text-outline mt-1">description</span>
+<div>
+<p class="font-semibold text-on-surface">Document Digging</p>
+<p class="text-body-sm text-on-surface-variant">Manually correlating PDFs and spreadsheet versions.</p>
+</div>
+</li>
+</ul>
+<!-- Subtle Texture -->
+<div class="absolute -right-4 -bottom-4 opacity-10 rotate-12 group-hover:rotate-0 transition-transform duration-700">
+<span class="material-symbols-outlined text-[120px]">layers_clear</span>
+</div>
+</div>
+<!-- Transitional Element (Desktop Only) -->
+<div class="hidden lg:col-span-2 lg:flex flex-col items-center justify-center relative">
+<div class="w-px h-1/2 bg-outline-variant absolute top-0"></div>
+<div class="z-10 bg-surface p-stack-sm border border-tertiary rounded-full ai-layer-glow">
+<span class="material-symbols-outlined text-tertiary text-4xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="w-px h-1/2 bg-tertiary/30 absolute bottom-0"></div>
+</div>
+<!-- Target State Card -->
+<div class="lg:col-span-5 flex flex-col gap-stack-md p-stack-lg border border-tertiary/40 bg-primary-container rounded-lg relative overflow-hidden ai-layer-glow">
+<div class="flex items-center gap-stack-sm text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">target</span>
+<span class="font-label-caps uppercase tracking-widest">Target State</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-tertiary">Digital Velocity</h3>
+<ul class="flex flex-col gap-stack-md mt-stack-sm">
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-tertiary mt-1">forum</span>
+<div>
+<p class="font-semibold text-on-surface">Natural Language Enquiries</p>
+<p class="text-body-sm text-on-surface-variant">Single-entry point for all organizational knowledge.</p>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-tertiary mt-1">bolt</span>
+<div>
+<p class="font-semibold text-on-surface">Zero-Latency Insights</p>
+<p class="text-body-sm text-on-surface-variant">Immediate synthesis of cross-departmental datasets.</p>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-tertiary mt-1">summarize</span>
+<div>
+<p class="font-semibold text-on-surface">Autonomous Reporting</p>
+<p class="text-body-sm text-on-surface-variant">Context-aware summaries generated on-demand.</p>
+</div>
+</li>
+</ul>
+<div class="absolute -right-8 -top-8 opacity-20 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[160px] text-tertiary">psychology</span>
+</div>
+</div>
+</section>
+<!-- Interactive AI Conversational Layer -->
+<section class="mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="flex flex-col gap-stack-md">
+<h4 class="font-label-caps text-on-surface-variant tracking-[0.2em] uppercase">Conversational Interface</h4>
+<p class="font-body-md text-on-surface-variant max-w-md">The Phoenix AI layer acts as a cognitive bridge, translating executive intent into complex data queries instantly.</p>
+<div class="mt-stack-md flex flex-col gap-stack-sm">
+<!-- Example Query 1 -->
+<div class="flex items-center justify-between p-stack-md bg-surface-container-high border-l-2 border-tertiary hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<span class="font-body-md italic text-on-surface-variant group-hover:text-on-surface">"When am I joining the Audit Committee review?"</span>
+<span class="material-symbols-outlined text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<!-- Example Query 2 -->
+<div class="flex items-center justify-between p-stack-md bg-surface-container-high border-l-2 border-tertiary hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<span class="font-body-md italic text-on-surface-variant group-hover:text-on-surface">"Summarize open audits for the APAC region."</span>
+<span class="material-symbols-outlined text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<!-- Example Query 3 -->
+<div class="flex items-center justify-between p-stack-md bg-surface-container-high border-l-2 border-tertiary hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<span class="font-body-md italic text-on-surface-variant group-hover:text-on-surface">"What is the current burn rate vs Q3 forecast?"</span>
+<span class="material-symbols-outlined text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Visual Element: AI Neural Layer Visualization -->
+<div class="relative h-[320px] md:h-[400px] w-full rounded-xl overflow-hidden border border-outline-variant group">
+
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-stack-md left-stack-md right-stack-md">
+<div class="p-stack-md backdrop-blur-md bg-surface/40 border border-outline-variant/30 rounded-lg">
+<div class="flex items-center gap-stack-sm mb-stack-xs">
+<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
+<span class="font-label-caps text-on-surface text-[10px]">Processing Cognitive Request...</span>
+</div>
+<div class="h-1 w-full bg-outline-variant rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-2/3 animate-[shimmer_2s_infinite]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Anchor -->
+<footer class="w-full bottom-0 fixed border-t border-outline-variant bg-surface z-50">
+<div class="flex justify-between items-center px-margin-desktop py-stack-sm w-full max-w-container-max mx-auto">
+<div class="flex gap-stack-lg">
+<span class="font-label-caps text-on-surface-variant opacity-70">Slide 4 of 12</span>
+<span class="font-label-caps text-on-surface-variant opacity-70">Internal Use Only</span>
+</div>
+<div class="font-label-caps text-label-caps tracking-widest text-on-surface-variant">
+                © 2024 Phoenix Digital Assistant Initiative | Highly Confidential
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for shimmer effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shimmer {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(200%); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Simulated data reveal for the "Target State" items
+        document.querySelectorAll('.lg\\:col-span-5 ul li').forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(10px)';
+            setTimeout(() => {
+                el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }, 300 + (i * 100));
+        });
+    </script>
+</body></html>

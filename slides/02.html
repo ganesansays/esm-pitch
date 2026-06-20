@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phoenix Digital Assistant - Executive Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Public+Sans:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "outline-variant": "#44474d",
+                    "tertiary-fixed-dim": "#00dbe7",
+                    "surface-container-highest": "#323537",
+                    "surface-tint": "#b9c7e4",
+                    "inverse-primary": "#515f78",
+                    "on-primary": "#233148",
+                    "surface-container-low": "#191c1e",
+                    "tertiary-fixed": "#74f5ff",
+                    "background": "#101415",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-surface": "#e0e3e5",
+                    "surface-bright": "#363a3b",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "inverse-surface": "#e0e3e5",
+                    "primary-container": "#0a192f",
+                    "surface-container-high": "#272a2c",
+                    "tertiary": "#00dbe7",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#001d1f",
+                    "on-tertiary-fixed": "#002022",
+                    "surface-variant": "#323537",
+                    "surface": "#101415",
+                    "on-secondary-container": "#abb9d1",
+                    "on-background": "#e0e3e5",
+                    "on-primary-container": "#74829d",
+                    "on-error-container": "#ffdad6",
+                    "surface-dim": "#101415",
+                    "primary": "#b9c7e4",
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#0b0f10",
+                    "surface-container": "#1d2022",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "inverse-on-surface": "#2d3133",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "on-secondary": "#233144",
+                    "secondary-container": "#3c4a5e",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary-fixed": "#d5e3fc",
+                    "outline": "#8f9097",
+                    "on-surface-variant": "#c5c6cd",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "secondary": "#b9c7df",
+                    "on-tertiary-container": "#009098",
+                    "on-tertiary": "#00363a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "64px",
+                    "stack-xl": "64px",
+                    "margin-tablet": "32px",
+                    "stack-xs": "4px"
+            },
+            "fontFamily": {
+                    "headline-xl-mobile": ["Public Sans"],
+                    "headline-lg": ["Public Sans"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-xl": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-sm": ["Inter"],
+                    "data-display": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "data-display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "300"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .executive-border {
+            border-left: 4px solid #00dbe7;
+        }
+        .tonal-lift {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid #475569;
+        }
+        .action-glow {
+            box-shadow: 0 0 15px rgba(0, 219, 231, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant z-50">
+<div class="flex items-center justify-between px-margin-desktop py-stack-md w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-headline-md" data-icon="insights">insights</span>
+<h1 class="font-headline-md text-headline-md font-semibold text-primary dark:text-primary-fixed-dim">Phoenix Digital Assistant</h1>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl">
+<!-- Executive Header Section -->
+<section class="mb-stack-xl">
+<div class="executive-border pl-6 mb-stack-lg">
+<p class="font-label-caps text-label-caps text-tertiary mb-2 uppercase tracking-widest">Strategic Briefing</p>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Executive Summary</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- BLUF Card -->
+<div class="md:col-span-8 tonal-lift p-stack-lg rounded-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">System of Record Transformation</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg leading-relaxed">
+                        Phoenix represents a paradigm shift for the enterprise. By synthesizing two decades of operational intelligence, we are moving beyond simple data retrieval into a unified, conversation-driven intelligence layer that serves as the definitive System of Record.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-stack-md">
+<div class="p-stack-md border-r border-outline-variant last:border-r-0">
+<p class="font-data-display text-data-display text-tertiary mb-1">20y</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Operational Data Heritage</p>
+</div>
+<div class="p-stack-md border-r border-outline-variant last:border-r-0">
+<span class="material-symbols-outlined text-tertiary text-headline-md mb-2" data-icon="forum">forum</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Conversational Interface</p>
+</div>
+<div class="p-stack-md">
+<span class="material-symbols-outlined text-tertiary text-headline-md mb-2" data-icon="hub">hub</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Primary System of Record</p>
+</div>
+</div>
+</div>
+<!-- Strategic Shift Graphic -->
+<div class="md:col-span-4 h-full">
+<div class="tonal-lift p-stack-lg rounded-lg h-full flex flex-col justify-center border-tertiary/20">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-stack-lg text-center">Strategic Shift</p>
+<div class="flex flex-col items-center gap-stack-md">
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-on-surface opacity-50">Data Visibility</p>
+<span class="material-symbols-outlined text-outline-variant text-headline-xl block my-2" data-icon="south">south</span>
+<div class="bg-tertiary/10 p-stack-md rounded-lg action-glow border border-tertiary/30">
+<p class="font-headline-md text-headline-md text-tertiary font-bold">Intelligent Engagement</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Analysis Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Legacy to Future -->
+<div class="tonal-lift p-stack-lg rounded-lg md:col-span-1">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="material-symbols-outlined text-tertiary" data-icon="history">history</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Data Heritage</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">
+                    Leveraging 20 years of siloed operational data to train a context-aware model that understands the nuances of our specific business logic and historical performance.
+                </p>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+<p class="mt-2 font-label-caps text-[10px] text-on-surface-variant text-right">DATA INTEGRITY: 100%</p>
+</div>
+<!-- Interaction Shift -->
+<div class="tonal-lift p-stack-lg rounded-lg md:col-span-1">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="material-symbols-outlined text-tertiary" data-icon="voice_chat">voice_chat</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Interaction Model</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">
+                    Transitioning from complex navigation menus to a natural language interface. Phoenix proactively surfaces insights without requiring manual query construction.
+                </p>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-label-caps text-label-caps">NAV-DRIVEN</span>
+<span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+<span class="font-label-caps text-label-caps text-tertiary">CONVERSATION</span>
+</div>
+</div>
+<!-- Operational Efficiency -->
+<div class="tonal-lift p-stack-lg rounded-lg md:col-span-1">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="material-symbols-outlined text-tertiary" data-icon="verified">verified</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Authority</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">
+                    Phoenix becomes the authoritative voice for KPIs and operational status, eliminating cross-departmental discrepancies in reporting and strategic alignment.
+                </p>
+<button class="w-full py-2 border border-tertiary text-tertiary font-label-caps text-label-caps hover:bg-tertiary hover:text-primary-container transition-all">
+                    VIEW DATA GOVERNANCE
+                </button>
+</div>
+</section>
+<!-- Visual Anchor -->
+<section class="mt-stack-xl relative h-[300px] rounded-xl overflow-hidden border border-outline-variant">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A sophisticated, minimalist abstract visualization of digital data flowing through a neural network in a dark, professional environment. The scene uses Action Cyan glows and deep slate tones to represent high-tech intelligence. Subtle geometric light patterns suggest architectural precision and strategic foresight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLAdjoBJzlFEcXkWGdsiMM047Y4kShOaumm02bGRrOIsvjGeovV7yZwtfI2skOH8Qxq3w72hqS_12A3wMHjBlmtQTsxZUh8B6CtM4EX8fU5wwNKlGvjCP-C4tguroCd9EjtyLMpBq08EE32vyak9abNZuJahH2OICHoiq_V3JouJjQwXUHwutyS8GY23UUrhLHXHhCDEAxNZNRSQfS-ZQIS2TY60GKIzDRk35TZBJNYdv0TI3HS-0ZvMLHWSjtWwRA5IiAX7xYI1Wp')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-center px-stack-xl max-w-2xl">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Ready for Deployment</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Phoenix Digital Assistant aligns enterprise-wide execution with the velocity of AI-driven decision making.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 bg-surface dark:bg-surface border-t border-outline-variant dark:border-outline-variant mt-auto">
+<div class="flex justify-between items-center px-margin-desktop py-stack-sm w-full max-w-container-max mx-auto">
+<div class="flex gap-stack-md">
+<span class="font-label-caps text-label-caps text-tertiary dark:text-tertiary-fixed">Slide 2 of 12</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant opacity-70">Internal Use Only</span>
+</div>
+<p class="font-label-caps text-label-caps tracking-widest text-on-surface-variant">© 2024 Phoenix Digital Assistant Initiative | Highly Confidential</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.tonal-lift').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = 'rgba(0, 219, 231, 0.4)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = '#475569';
+            });
+        });
+    </script>
+</body></html>
