@@ -1,46 +1,4 @@
-/**
- * Build a navigable presentation from extract-from-stitch HTML (unchanged).
- */
-import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
-import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, "..");
-const EXTRACT_DIR = join(ROOT, "extract-from-stitch");
-const SLIDES_DIR = join(ROOT, "slides");
-const OUT_PRESENTATION = join(ROOT, "presentation.html");
-const MANIFEST = join(EXTRACT_DIR, "manifest.json");
-
-async function collectSlides() {
-  if (!existsSync(MANIFEST)) {
-    throw new Error("extract-from-stitch/manifest.json not found");
-  }
-
-  const manifest = JSON.parse(await readFile(MANIFEST, "utf8"));
-  const slides = manifest.slides.map((s, i) => {
-    const src = join(EXTRACT_DIR, s.file);
-    if (!existsSync(src)) {
-      throw new Error(`Missing Stitch export: ${s.file}`);
-    }
-    const destName = `${String(i + 1).padStart(2, "0")}.html`;
-    return { src, destName, title: s.title };
-  });
-
-  return slides;
-}
-
-function buildIndex(slides) {
-  const total = slides.length;
-  const slideList = slides
-    .map(
-      (s, i) =>
-        `    { file: "slides/${s.destName}", title: ${JSON.stringify(s.title)} }`
-    )
-    .join(",\n");
-
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -77,13 +35,19 @@ function buildIndex(slides) {
   <iframe id="frame" title="Presentation slide"></iframe>
   <nav class="bar" aria-label="Slide navigation">
     <button id="prev" aria-label="Previous slide">&#8592;</button>
-    <span class="counter" id="counter">1 / ${total}</span>
+    <span class="counter" id="counter">1 / 7</span>
     <button id="next" aria-label="Next slide">&#8594;</button>
     <button id="fs" aria-label="Fullscreen" title="Fullscreen (F)">&#9974;</button>
   </nav>
   <script>
     const SLIDES = [
-${slideList}
+    { file: "slides/01.html", title: "Title Slide" },
+    { file: "slides/02.html", title: "Executive Summary" },
+    { file: "slides/03.html", title: "Strategic Vision" },
+    { file: "slides/04.html", title: "High-Frequency AI Opportunities" },
+    { file: "slides/05.html", title: "Target Architecture" },
+    { file: "slides/06.html", title: "Next Steps & Pilot Phase" },
+    { file: "slides/07.html", title: "Sprint to Pilot: 4-Week Framework" }
     ];
     let current = 0;
     const frame = document.getElementById("frame");
@@ -135,43 +99,8 @@ ${slideList}
       }
     });
 
-    const hash = location.hash.match(/^#(\\d+)$/);
+    const hash = location.hash.match(/^#(\d+)$/);
     show(hash ? Math.min(parseInt(hash[1], 10) - 1, SLIDES.length - 1) : 0);
   </script>
 </body>
-</html>`;
-}
-
-const SLIDE_GUARD =
-  '<script src="../js/auth-config.js"></script><script src="../js/auth.js"></script><script>SiteAuth.requireAuth();</script>';
-
-function injectSlideGuard(html) {
-  if (html.includes("SiteAuth.requireAuth")) return html;
-  return html.replace(/<body([^>]*)>/i, "<body$1>" + SLIDE_GUARD);
-}
-
-async function main() {
-  const slides = await collectSlides();
-
-  await mkdir(SLIDES_DIR, { recursive: true });
-
-  for (const slide of slides) {
-    const dest = join(SLIDES_DIR, slide.destName);
-    const html = await readFile(slide.src, "utf8");
-    await writeFile(dest, injectSlideGuard(html), "utf8");
-  }
-
-  await writeFile(OUT_PRESENTATION, buildIndex(slides), "utf8");
-
-  console.log(`Built presentation with ${slides.length} Stitch slide(s) (exact copies)`);
-  for (const s of slides) {
-    console.log(`  slides/${s.destName} ← ${s.title}`);
-  }
-  console.log("\nRun: npm run serve → http://localhost:8080");
-  console.log("      Landing page: /  ·  Deck: /presentation.html");
-}
-
-main().catch((err) => {
-  console.error("Build failed:", err.message || err);
-  process.exit(1);
-});
+</html>

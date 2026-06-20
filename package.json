@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node scripts/build-presentation.mjs",
     "serve": "python3 -m http.server 8080",
-    "export:pdf": "node scripts/export-pdf.mjs"
+    "export:pdf": "node scripts/export-pdf.mjs",
+    "set-password": "node scripts/set-password.mjs"
   },
   "devDependencies": {
     "pdf-lib": "^1.17.1",
