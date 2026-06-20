@@ -2,15 +2,14 @@
 
 Hostable slide deck built from the **exact Stitch exports** in `extract-from-stitch/`. No redesign — each slide is the raw `code.html` from Google Stitch.
 
-## Slides (7 exported)
+## Slides (6 exported)
 
 1. Title Slide
 2. Executive Summary
 3. Strategic Vision
 4. High-Frequency AI Opportunities
 5. Target Architecture
-6. Next Steps & Pilot Phase
-7. Prototype Scope
+6. Prototype Scope
 
 ## Quick Start
 
