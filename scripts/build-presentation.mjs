@@ -142,13 +142,6 @@ ${slideList}
 </html>`;
 }
 
-const SLIDE_GUARD =
-  '<script src="../js/auth-config.js"></script><script src="../js/auth.js"></script><script>SiteAuth.requireAuth();</script>';
-
-function injectSlideGuard(html) {
-  if (html.includes("SiteAuth.requireAuth")) return html;
-  return html.replace(/<body([^>]*)>/i, "<body$1>" + SLIDE_GUARD);
-}
 
 async function main() {
   const slides = await collectSlides();
@@ -158,7 +151,7 @@ async function main() {
   for (const slide of slides) {
     const dest = join(SLIDES_DIR, slide.destName);
     const html = await readFile(slide.src, "utf8");
-    await writeFile(dest, injectSlideGuard(html), "utf8");
+    await writeFile(dest, html, "utf8");
   }
 
   await writeFile(OUT_PRESENTATION, buildIndex(slides), "utf8");

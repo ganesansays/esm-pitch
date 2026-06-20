@@ -135,6 +135,11 @@
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">insights</span>
 <h1 class="font-headline-md text-headline-md font-semibold text-primary">Phoenix Digital Assistant</h1>
 </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-tertiary font-semibold hover:text-tertiary transition-colors duration-200 cursor-pointer" href="#">Sprints</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors duration-200 cursor-pointer" href="#">Architecture</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors duration-200 cursor-pointer" href="#">Roadmap</a>
+</nav>
 </div>
 </header>
 <main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-stack-xl">
