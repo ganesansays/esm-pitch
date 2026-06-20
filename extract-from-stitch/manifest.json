@@ -7,9 +7,5 @@
     { "file": "stitch_consulting_presentation_deck/high_frequency_ai_opportunities_refined/code.html", "title": "High-Frequency AI Opportunities" },
     { "file": "stitch_consulting_presentation_deck/target_architecture/code.html", "title": "Target Architecture" },
     { "file": "stitch_consulting_presentation_deck/prototype_scope/code.html", "title": "Prototype Scope" }
-  ],
-  "_removed": [
-    "next_steps_pilot_phase — slide 6 (90-Day Deployment Framework)",
-    "sprint_to_pilot_framework — replaced by prototype_scope from deck (4)"
   ]
 }
