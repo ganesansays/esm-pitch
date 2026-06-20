@@ -54,6 +54,26 @@ index.html
 slides/
 ```
 
+### GitHub Pages
+
+The repo includes a GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) that deploys on push to `main`.
+
+**First-time setup:**
+
+```bash
+gh auth login
+gh repo create esm-pitch --public --source=. --remote=origin --push
+gh api repos/$(gh repo view --json nameWithOwner -q .nameWithOwner)/pages -X POST -f build_type=workflow
+```
+
+Your site will be live at `https://<username>.github.io/esm-pitch/` within a minute or two.
+
+**Updates:** push to `main` and the workflow redeploys automatically.
+
+```bash
+git push origin main
+```
+
 ## Source
 
 ```
