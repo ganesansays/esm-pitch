@@ -10,7 +10,7 @@ Hostable slide deck built from the **exact Stitch exports** in `extract-from-sti
 4. High-Frequency AI Opportunities
 5. Target Architecture
 6. Next Steps & Pilot Phase
-7. Sprint to Pilot: 4-Week Framework
+7. Prototype Scope
 
 ## Quick Start
 
